@@ -3,10 +3,7 @@
 ## Deploying to Iguana
 
 Currently this is a manual process that involves building a deployment package containing translator projects in a zip format and importing them into Iguana channels.
-
-### Building a deployment package
-
-> **The script is intended to be used on local development environments only and should never be run on a Trust environment!**
+Official releases will be already packaged and can be downloaded from the [release page](https://github.com/KainosSoftwareLtd/evolve.delivery.integration/releases)
 
 ### Importing translator zip project
 
