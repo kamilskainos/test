@@ -8,7 +8,7 @@ Currently this is a manual process that involves building a deployment package c
 
 > **The script is intended to be used on local development environments only and should never be run on a Trust environment!**
 
-### Importing transalor zip project
+### Importing translator zip project
 
 1. Identify the correct channel.
 2. On the channel details screen use the Edit Script option.
@@ -19,7 +19,7 @@ There are 3 types of translator projects:
 3. Once in the Iguana translator editor, navigate to **main.lua** file and choose **Import Project** option.
 4. Import project from zip file.
 5. Iguana will detect any changes automatically. Press **Commit to source control** to review those.
-6. **You need to make sure that any local configuration or other project dependancies are not being by mistake.**
+6. **You need to make sure that any local configuration or other project dependencies are not being incorrectly overwritten. **
 Any conflicts will need to be resolved before you can commit the changes.
 7. Once you are happy with the changes have been reviewed, add a note and **Commit Files**.
 
