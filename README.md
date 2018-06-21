@@ -1,8 +1,8 @@
-# Welcome to evolve.delivery.integration
+# Welcome to evolve.delivery.integration repository
 
 ## Deploying to Iguana
 
-Currently this is a manual process.
+Currently this is a manual process. TBC...
 
 ## Making changes to Iguana scripts
 
@@ -22,13 +22,13 @@ Currently the deployment process requires a number of manual steps, see instruct
 ## Making changes to other artifacts
 
 Pulling other artifacts back into source control is currently not automated.
-Therefore any changes that are made outside of local repository file strucutre will need to be manually copied in before pushed to git branch.
+Therefore, any changes that are made outside of local repository file structure will need to be manually copied in before pushed to git branch.
 
 ## Pulling scripts from Iguana
 
 Changes done to scripts via Iguana instance interface can be pulled back automatically using a script. Current version supports both Iguana v5 and Iguana v6. 
-All project files will be pulled from Iguana user folder. It's up to you to make sure that only relevant files are uploaded to GitHub by manually deleting any unnecessary additons (e.g. local test channels).
-<br />It's worth noting that the script will **ignore** any channels for swhich the name starts with a **~** character. This allows developers to name their local channels (e.g. used for testing) accordingly and avoid being pulled back into source control.
+<br />All project files will be pulled from Iguana user folder. It's up to you to make sure that only relevant files are uploaded to GitHub by manually deleting any unnecessary additions (e.g. local test channels).
+<br />It's worth noting that the script will **ignore** any channels for switch the name starts with a **~** character. This allows developers to name their local channels (e.g. used for testing) accordingly and avoid being pulled back into source control.
 
 Supported translator script types:
 * :white_check_mark: Filter
@@ -41,7 +41,7 @@ In order to use the script you will need to have node.js installed locally - vis
 
 ### Running the script
 
-> **The script is inteded to be used on local development enviroments only and should never be run on a Trust environment**
+> **The script is intended to be used on local development environments only and should never be run on a Trust environment!**
 
 1. Open command line / terminal and navigate to repository root directory.
 2. Download node.js project packages by running: ``` npm install ``` command.
