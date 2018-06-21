@@ -41,7 +41,7 @@ In order to use the script you will need to have node.js installed locally - vis
 
 ### Running the script
 
-> The below should be never attempted on a Trust environment
+> **The script is inteded to be used on local development enviroments only and should never be run on a Trust environment**
 
 1. Open command line / terminal and navigate to repository root directory.
 2. Download node.js project packages by running: ``` npm install ``` command.
