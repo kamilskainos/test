@@ -28,7 +28,7 @@ Therefore, any changes that are made outside of local repository file structure 
 
 Changes done to scripts via Iguana instance interface can be pulled back automatically using a script. Current version supports both Iguana v5 and Iguana v6. 
 <br />All project files will be pulled from Iguana user folder. It's up to you to make sure that only relevant files are uploaded to GitHub by manually deleting any unnecessary additions (e.g. local test channels).
-<br />It's worth noting that the script will **ignore** any channels for switch the name starts with a **~** character. This allows developers to name their local channels (e.g. used for testing) accordingly and avoid being pulled back into source control.
+<br />It's worth noting that the script will **ignore** any channels for which the name starts with a **~** character. This allows developers to name their local channels (e.g. used for testing) accordingly and avoid being pulled back into source control.
 
 Supported translator script types:
 * :white_check_mark: Filter
