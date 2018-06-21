@@ -3,16 +3,16 @@
 ## Deploying to Iguana
 
 Currently this is a manual process that involves building a deployment package containing translator projects in a zip format and importing them into Iguana channels.
-Official releases will be already packaged and can be downloaded from the [release page](https://github.com/KainosSoftwareLtd/evolve.delivery.integration/releases)
+<br />Official releases will be already packaged and can be downloaded from the [release page](https://github.com/KainosSoftwareLtd/evolve.delivery.integration/releases)
 
 ### Importing translator zip project
 
 1. Identify the correct channel.
 2. On the channel details screen use the Edit Script option.
 There are 3 types of translator projects:
-* Filter - Edit Script in Filter tab
-* To Translator - Edit Script in Destination tab
-* From Translator - Edit Script in Source tab
+ * Filter - Edit Script in Filter tab
+ * To Translator - Edit Script in Destination tab
+ * From Translator - Edit Script in Source tab
 3. Once in the Iguana translator editor, navigate to **main.lua** file and choose **Import Project** option.
 4. Import project from zip file.
 5. Iguana will detect any changes automatically. Press **Commit to source control** to review those.
