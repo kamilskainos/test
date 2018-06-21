@@ -2,7 +2,26 @@
 
 ## Deploying to Iguana
 
-Currently this is a manual process. TBC...
+Currently this is a manual process that involves building a deployment package containing translator projects in a zip format and importing them into Iguana channels.
+
+### Building a deployment package
+
+> **The script is intended to be used on local development environments only and should never be run on a Trust environment!**
+
+### Importing transalor zip project
+
+1. Identify the correct channel.
+2. On the channel details screen use the Edit Script option.
+There are 3 types of translator projects:
+* Filter - Edit Script in Filter tab
+* To Translator - Edit Script in Destination tab
+* From Translator - Edit Script in Source tab
+3. Once in the Iguana translator editor, navigate to **main.lua** file and choose **Import Project** option.
+4. Import project from zip file.
+5. Iguana will detect any changes automatically. Press **Commit to source control** to review those.
+6. **You need to make sure that any local configuration or other project dependancies are not being by mistake.**
+Any conflicts will need to be resolved before you can commit the changes.
+7. Once you are happy with the changes have been reviewed, add a note and **Commit Files**.
 
 ## Making changes to Iguana scripts
 
@@ -16,13 +35,13 @@ Currently the deployment process requires a number of manual steps, see instruct
 7. Resolve all conflicts (if any) and commit changes locally.
 8. Push changes to remote branch.
 9. Open pull request.
-10. Once the pull request has been approved merge changes into the master branch.
+10. Once the pull request has been approved (code reviewed) merge changes into the master branch.
 11. Delete your feature branch.
 
 ## Making changes to other artifacts
 
 Pulling other artifacts back into source control is currently not automated.
-Therefore, any changes that are made outside of local repository file structure will need to be manually copied in before pushed to git branch.
+Therefore, any changes that are made outside of local repository file structure will need to be manually copied in before pushed to a feature branch.
 
 ## Pulling scripts from Iguana
 
