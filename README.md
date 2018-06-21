@@ -1,1 +1,55 @@
+# Welcome to evolve.delivery.integration
 
+## Deploying to Iguana
+
+Currently this is a manual process.
+
+## Making changes to Iguana scripts
+
+1. Create a new feature branch.
+2. Create new channel(s) or deploy existing from repository.
+Currently the deployment process requires a number of manual steps, see instructions below.
+3. Make the necessary changes and commit them in Iguana (Iguana uses a separate version control system).
+4. Ensure your local feature branch is up to date.
+5. Run **pull-from-iguana** script to pull all changes from Iguana into your local git repository (see instructions below).
+6. To avoid any conflicts during finalization of the feature branch, ensure that all changes from master are merged to your feature branch.
+7. Resolve all conflicts (if any) and commit changes locally.
+8. Push changes to remote branch.
+9. Open pull request.
+10. Once the pull request has been approved merge changes into the master branch.
+11. Delete your feature branch.
+
+## Making changes to other artifacts
+
+Pulling other artifacts back into source control is currently not automated.
+Therefore any changes that are made outside of local repository file strucutre will need to be manually copied in before pushed to git branch.
+
+## Pulling scripts from Iguana
+
+Changes done to scripts via Iguana instance interface can be pulled back automatically using a script. Current version supports both Iguana v5 and Iguana v6. 
+All project files will be pulled from Iguana user folder. It's up to you to make sure that only relevant files are uploaded to GitHub by manually deleting any unnecessary additons (e.g. local test channels).
+<br />It's worth noting that the script will **ignore** any channels for swhich the name starts with a **~** character. This allows developers to name their local channels (e.g. used for testing) accordingly and avoid being pulled back into source control.
+
+Supported translator script types:
+* :white_check_mark: Filter
+* :white_check_mark: To translator
+* :x: From translator
+
+### Prerequisites
+
+In order to use the script you will need to have node.js installed locally - visit https://nodejs.org/en/ for more details.
+
+### Running the script
+
+> The below should be never attempted on a Trust environment
+
+1. Open command line / terminal and navigate to repository root directory.
+2. Download node.js project packages by running: ``` npm install ``` command.
+3. To execute the script run: ``` node pull-from-iguana.js ``` command.
+4. If the script is run for the first time a default configuration file (config.json) will be created.
+You will be asked if to continue with the default configuration:
+```
+iguana.username = "admin";
+iguana.installFolder = "C:\\Program Files\\iNTERFACEWARE\\Iguana";
+```
+If this is different for you (e.g. you are using a different user account in Iguana), answer no, amend the **config.json file** accordingly and run the script again.
